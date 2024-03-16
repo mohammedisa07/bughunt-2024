@@ -1,5 +1,3 @@
-#Python program to create a doubly linked list and print nodes from beginning
-
 class Node(object):
     # Doubly linked node
     def __init__(self, data=None, next=None, prev=None):
@@ -27,15 +25,14 @@ class doubly_linked_list(object):
         self.count += 1
 
     def print_foward(self):
-        print(self.iter())
+        self.iter_and_print()
             
-    def iter(self):
-        # Iterate the list
+    def iter_and_print(self):
+        # Iterate the list and print items
         current = self.head
         while current:
-            item_val = current.data
+            print(current.data)
             current = current.next
-            yield item_val
 
 items = doubly_linked_list()
 items.append_item('C#')
@@ -46,3 +43,4 @@ items.append_item('Python')
 
 print("Print Items in the Doubly linked:")
 items.print_foward()
+
